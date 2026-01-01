@@ -1,4 +1,4 @@
-import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { Gallery } from "../components/Gallery";
 
 export const Route = createFileRoute("/")({
@@ -6,8 +6,6 @@ export const Route = createFileRoute("/")({
 });
 
 function Home() {
-  const navigate = useNavigate();
-
   return (
     <>
       <Gallery />
