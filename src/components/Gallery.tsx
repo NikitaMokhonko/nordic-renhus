@@ -9,24 +9,26 @@ export function Gallery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <div className="flex flex-row gap-5 max-w-[80%] mx-auto">
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-[90%] sm:max-w-[80%] mx-auto">
       {images.map((img, i) => (
         <img
           key={i}
           src={img}
           alt="Projekt"
           onClick={() => setSelectedImage(img)}
-          className="w-full h-60 cursor-pointer"
+          className="w-full h-60 object-cover cursor-pointer"
         />
       ))}
       {selectedImage && (
         <div
           onClick={() => setSelectedImage(null)}
-          
-
-          className="fixed top-0 left-0 w-full h-full bg-black flex items-center justify-center"    
+          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
         >
-          <img src={selectedImage} alt="Projekt" className="w-4/5 h-4/5 object-contain" />
+          <img
+            src={selectedImage}
+            alt="Projekt"
+            className="object-contain max-w-[95%] max-h-[95%]"
+          />
         </div>
       )}
     </div>
