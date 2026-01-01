@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer style={{ padding: "2rem", textAlign: "center", opacity: 0.6 }}>
+    <footer className="text-center">
       © {new Date().getFullYear()} Nordic Renhus AB
     </footer>
   );

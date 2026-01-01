@@ -1,4 +1,4 @@
-import { useNavigate } from "@tanstack/react-router";
+import { useState } from "react";
 import p1 from "../../public/Bygg-1.jpeg";
 import p2 from "../../public/Bygg-2.jpeg";
 import p3 from "../../public/Bygg-3.jpeg";
@@ -6,26 +6,29 @@ import p3 from "../../public/Bygg-3.jpeg";
 const images = [p1, p2, p3];
 
 export function Gallery() {
-  const navigate = useNavigate();
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
-        gap: "1rem",
-      }}
-    >
+    <div className="flex flex-row gap-5 max-w-[80%] mx-auto">
       {images.map((img, i) => (
         <img
           key={i}
           src={img}
           alt="Projekt"
-          style={{ width: "100%", cursor: "pointer", borderRadius: 8 }}
-              onClick={() => navigate({ to: "/services" })}
-              className="w-40 h-40"
+          onClick={() => setSelectedImage(img)}
+          className="w-full h-60 cursor-pointer"
         />
       ))}
+      {selectedImage && (
+        <div
+          onClick={() => setSelectedImage(null)}
+          
+
+          className="fixed top-0 left-0 w-full h-full bg-black flex items-center justify-center"    
+        >
+          <img src={selectedImage} alt="Projekt" className="w-4/5 h-4/5 object-contain" />
+        </div>
+      )}
     </div>
   );
 }
