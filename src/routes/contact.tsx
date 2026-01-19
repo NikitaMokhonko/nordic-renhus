@@ -7,13 +7,14 @@ export const Route = createFileRoute("/contact")({
 function Contact() {
   return (
     <>
-      <h1>Kontakt</h1>
-      <p>
-        <strong>Nordic Renhus AB</strong>
-      </p>
-      <p>Bruksvägen 3, lgh 1108</p>
-      <p>165 65 Hässelby</p>
-      <p>Stockholm, Sverige</p>
+      <div className="flex flex-col justify-center items-center mt-10">
+        <h1 className="text-xl font-bold mb-10">Kontakta Oss</h1>
+        <p className="font-semibold mb-2">Nordic Renhus AB</p>
+        <a href="mailto:nordicrenhus@gmail.com" className="mb-10 cursor-pointer">Nordicrenhus@gmail.com</a>
+        <p>Bruksvägen 3, lgh 1108</p>
+        <p>165 65 Hässelby</p>
+        <p>Stockholm, Sverige</p>
+      </div>
     </>
   );
 }

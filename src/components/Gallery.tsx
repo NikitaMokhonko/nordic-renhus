@@ -1,34 +1,68 @@
 import { useState } from "react";
-import p1 from "../../public/Bygg-1.jpeg";
-import p2 from "../../public/Bygg-2.jpeg";
-import p3 from "../../public/Bygg-3.jpeg";
 
-const images = [p1, p2, p3];
+type GalleryProps = {
+  images: string[];
+};
 
-export function Gallery() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+export function Gallery({ images }: GalleryProps) {
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(
+    null
+  );
+
+  const handlePrevious = () => {
+    if (selectedImageIndex === null) return;
+    setSelectedImageIndex(
+      (selectedImageIndex - 1 + images.length) % images.length
+    );
+  };
+
+  const handleNext = () => {
+    if (selectedImageIndex === null) return;
+    setSelectedImageIndex((selectedImageIndex + 1) % images.length);
+  };
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-[90%] sm:max-w-[80%] mx-auto">
-      {images.map((img, i) => (
-        <img
-          key={i}
-          src={img}
-          alt="Projekt"
-          onClick={() => setSelectedImage(img)}
-          className="w-full h-60 object-cover cursor-pointer"
-        />
-      ))}
-      {selectedImage && (
+    <div className="max-w-[98%] sm:max-w-[80%] mx-auto">
+      <div className="flex sm:grid sm:grid-cols-3 gap-1 sm:gap-5 overflow-x-auto sm:overflow-visible snap-x snap-mandatory h-100 sm:h-auto">
+        {images.map((img, i) => (
+          <img
+            key={i}
+            src={img}
+            alt="Projekt"
+            onClick={() => setSelectedImageIndex(i)}
+            className="snap-center shrink-0 w-[85%] sm:w-full h-full sm:h-170 object-cover cursor-pointer"
+          />
+        ))}
+      </div>
+
+      {selectedImageIndex !== null && (
         <div
-          onClick={() => setSelectedImage(null)}
+          onClick={() => setSelectedImageIndex(null)}
           className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
         >
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              handlePrevious();
+            }}
+            className="absolute left-4 bg-white rounded-full p-2 cursor-pointer"
+          >
+            <img src="left.svg" alt="previous" className="w-8 h-8" />
+          </button>
           <img
-            src={selectedImage}
+            src={images[selectedImageIndex]}
             alt="Projekt"
-            className="object-contain max-w-[95%] max-h-[95%]"
+            className="object-cover max-w-[95%] max-h-[95%]"
           />
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              handleNext();
+            }}
+            className="absolute right-4 bg-white rounded-full p-2 cursor-pointer"
+          >
+            <img src="right.svg" alt="next" className="w-8 h-8" />
+          </button>
         </div>
       )}
     </div>

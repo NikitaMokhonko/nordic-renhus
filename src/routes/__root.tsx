@@ -6,9 +6,7 @@ export const Route = createRootRoute({
   component: () => (
     <>
       <Navbar />
-      <main style={{ maxWidth: 1200, margin: "0 auto", padding: "2rem" }}>
-        <Outlet />
-      </main>
+      <Outlet />
       <Footer />
     </>
   ),
