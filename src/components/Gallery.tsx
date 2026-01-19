@@ -22,8 +22,8 @@ export function Gallery({ images }: GalleryProps) {
   };
 
   return (
-    <div className="max-w-[98%] sm:max-w-[80%] mx-auto">
-      <div className="flex sm:grid sm:grid-cols-3 gap-1 sm:gap-5 overflow-x-auto sm:overflow-visible snap-x snap-mandatory h-100 sm:h-auto">
+    <div className="max-w-[98%] sm:max-w-[95%] mx-auto pb-10">
+      <div className="flex sm:grid sm:grid-cols-3 gap-1 sm:gap-10 overflow-x-auto sm:overflow-visible snap-x snap-mandatory h-100 sm:h-auto">
         {images.map((img, i) => (
           <img
             key={i}

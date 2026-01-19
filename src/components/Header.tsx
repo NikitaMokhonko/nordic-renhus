@@ -2,7 +2,7 @@ import { useNavigate } from "@tanstack/react-router";
 import logo from "../../public/logo-black.jpg";
 import { useState } from "react";
 
-export function Navbar() {
+export function Header() {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -70,7 +70,7 @@ export function Navbar() {
       </div>
 
       {menuOpen && (
-        <div className="sm:hidden flex flex-col bg-black p-5 text-lg space-y-5 border-b">
+        <div className="sm:hidden z-50 flex flex-col bg-black p-5 text-xl space-y-5 border-b border-t">
           {navLinks}
         </div>
       )}
