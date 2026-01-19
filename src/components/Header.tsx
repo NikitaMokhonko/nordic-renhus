@@ -1,5 +1,5 @@
 import { useNavigate } from "@tanstack/react-router";
-import logo from "../../public/logo.jpeg";
+import logo from "../../public/logo-black.jpg";
 import { useState } from "react";
 
 export function Navbar() {
