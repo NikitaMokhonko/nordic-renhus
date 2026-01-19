@@ -22,15 +22,15 @@ export function Gallery({ images }: GalleryProps) {
   };
 
   return (
-    <div className="max-w-[98%] sm:max-w-[95%] mx-auto pb-10">
-      <div className="flex sm:grid sm:grid-cols-3 gap-1 sm:gap-10 overflow-x-auto sm:overflow-visible snap-x snap-mandatory h-100 sm:h-auto">
+    <div className="max-w-[98%] mx-auto pb-10">
+      <div className="flex gap-1 sm:gap-5 overflow-x-auto snap-x snap-mandatory h-100 sm:h-auto">
         {images.map((img, i) => (
           <img
             key={i}
             src={img}
             alt="Projekt"
             onClick={() => setSelectedImageIndex(i)}
-            className="snap-center shrink-0 w-[85%] sm:w-full h-full sm:h-170 object-cover cursor-pointer"
+            className="snap-center shrink-0 w-[80%] h-full sm:h-170 sm:w-[23%] object-cover cursor-pointer"
           />
         ))}
       </div>

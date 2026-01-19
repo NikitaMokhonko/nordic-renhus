@@ -8,7 +8,7 @@ export function Welcome() {
         src="black-house.jpeg"
         alt="Black House"
       />
-      <div className="z-10 p-5 backdrop-blur-xl bg-black/80 rounded-sm font-semibold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
+      <div className="z-10 p-5 backdrop-blur-lg bg-black/60 rounded-sm font-semibold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
         <h1 className="text-white text-4xl sm:text-6xl px-4 py-2">
           Nordic Renhus AB
         </h1>

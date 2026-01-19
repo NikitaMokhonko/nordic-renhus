@@ -7,7 +7,7 @@ export const Route = createFileRoute("/services")({
 function Services() {
   return (
     <>
-      <div className="flex flex-col justify-center items-center mt-10">
+      <div className="flex flex-col min-h-screen items-center mt-10">
         <h1 className="text-xl font-bold mb-10">Våra tjänster</h1>
 
         <h3 className="mb-5 font-semibold">Rivning & demontering</h3>

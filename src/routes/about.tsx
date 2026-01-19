@@ -7,7 +7,7 @@ export const Route = createFileRoute("/about")({
 function About() {
   return (
     <>
-      <div className="flex flex-col items-center justify-center max-w-100 text-center mx-auto mt-10">
+      <div className="flex flex-col items-center min-h-screen max-w-100 text-center mx-auto mt-10">
         <h1 className="font-bold text-xl mb-10">Om Nordic Renhus AB</h1>
         <p>
           Nordic Renhus AB är ett erfaret byggföretag med specialistkompetens

@@ -7,7 +7,7 @@ export const Route = createFileRoute("/contact")({
 function Contact() {
   return (
     <>
-      <div className="flex flex-col justify-center items-center mt-10">
+      <div className="flex flex-col min-h-screen items-center mt-10">
         <h1 className="text-xl font-bold mb-10">Kontakta Oss</h1>
         <p className="font-semibold mb-2">Nordic Renhus AB</p>
         <a href="mailto:nordicrenhus@gmail.com" className="mb-10 cursor-pointer">Nordicrenhus@gmail.com</a>
