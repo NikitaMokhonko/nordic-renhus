@@ -23,7 +23,7 @@ export function Welcome() {
             exit={{ y: "-120%" }}
             staggerDuration={0.025}
             splitLevelClassName="overflow-hidden pb-1 pt-1"
-            rotationInterval={5000}
+            rotationInterval={4000}
           />
           <br />i Stockholm
         </p>
