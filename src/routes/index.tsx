@@ -15,6 +15,17 @@ function Home() {
   return (
     <>
       <Welcome />
+      <div className="pb-10 flex flex-col justify-center text-center max-w-[80%] mx-auto">
+        <h1 className="text-4xl font-semibold mb-4 sm:mb-10">
+          Vi hjälper dig med alla typer av byggprojekt, stora som små
+        </h1>
+        <h2>
+          Oavsett om du planerar en mindre renovering eller ett omfattande
+          byggprojekt, är vårt erfarna team redo att förverkliga dina visioner. <br /> <br />
+          Kontakta oss idag för en kostnadsfri konsultation och låt oss hjälpa dig
+          att skapa ditt drömhem.
+        </h2>
+      </div>
       <Gallery images={[p1, p2, p3, p4, p5]} />
     </>
   );
