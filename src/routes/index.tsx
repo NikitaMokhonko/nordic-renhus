@@ -21,9 +21,10 @@ function Home() {
         </h1>
         <h2>
           Oavsett om du planerar en mindre renovering eller ett omfattande
-          byggprojekt, är vårt erfarna team redo att förverkliga dina visioner. <br /> <br />
-          Kontakta oss idag för en kostnadsfri konsultation och låt oss hjälpa dig
-          att skapa ditt drömhem.
+          byggprojekt, är vårt erfarna team redo att förverkliga dina visioner.{" "}
+          <br /> <br />
+          Kontakta oss idag för en kostnadsfri konsultation och låt oss hjälpa
+          dig att skapa ditt drömhem.
         </h2>
       </div>
       <Gallery images={[p1, p2, p3, p4, p5]} />

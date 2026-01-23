@@ -15,7 +15,7 @@ export function Welcome() {
         <p className="text-white text-center text-lg sm:text-4xl mt-4 px-4 py-2">
           Din byggfirma för <br />
           <RotatingText
-            texts={["Rivning", "Demontering", "Markarbete"]}
+            texts={["Byggnation", "Demontering", "Markarbete", "Renovering", "Isolering"]}
             mainClassName="justify-center inline-block"
             staggerFrom={"last"}
             initial={{ y: "100%" }}
@@ -25,7 +25,7 @@ export function Welcome() {
             splitLevelClassName="overflow-hidden pb-1 pt-1"
             rotationInterval={4000}
           />
-          <br />i Stockholm
+          <br />i Sverige
         </p>
       </div>
     </div>
