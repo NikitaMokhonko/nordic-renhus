@@ -15,8 +15,8 @@ export function Welcome() {
         <p className="text-white text-center text-lg sm:text-4xl mt-4 px-4 py-2">
           Din byggfirma för <br />
           <RotatingText
-            texts={["Rivningar", "Markarbeten", "Isolering", "Byggnation"]}
-            mainClassName="justify-center inline-block"
+            texts={["Rivningar", "Markarbeten", "Husgrunder", "Inomhusarbeten", "Isolering", "Byggnation"]}
+            mainClassName="justify-center text-[#e21c1f] inline-block"
             staggerFrom={"last"}
             initial={{ y: "100%" }}
             animate={{ y: 0 }}

@@ -9,10 +9,13 @@ import hus1 from "../../public/hus1.jpg";
 import hus2 from "../../public/hus2.jpg";
 import hus3 from "../../public/hus3.jpg";
 import hus4 from "../../public/hus4.jpg";
+import hus6 from "../../public/hus6.jpg";
+import hus7 from "../../public/hus7.jpg";
 import renhus1 from "../../public/renhus1.jpg";
 import renhus2 from "../../public/renhus2.jpg";
 import bygg10 from "../../public/bygg-10.jpeg";
 import renhus3 from "../../public/renhus3.jpg";
+import kok1 from "../../public/kok1.jpg";
 import { useNavigate } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/services")({
@@ -58,7 +61,7 @@ function Services() {
           </h4>
         </div>
         <div className="sm:max-w-[75%]">
-          <Gallery rounded={false} images={[p1, bygg10, p3, p4, p5]} />
+          <Gallery rounded={false} images={[hus7, p1, bygg10, p3]} />
         </div>
         <div className="w-[80%] lg:w-[50%] lg:border-x border-[#e21c1f] rounded-4xl p-5 mb-15 mt-15">
           <h3 className="mb-5 font-semibold text-xl">Isolering</h3>
@@ -81,7 +84,7 @@ function Services() {
           </h4>
         </div>
         <div className="sm:max-w-[75%]">
-          <Gallery rounded={false} images={[ hus2, hus3, hus4]} />
+          <Gallery rounded={false} images={[hus2, hus3, hus4, kok1]} />
         </div>
         <div className="w-[80%] lg:w-[50%] lg:border-x border-[#e21c1f] rounded-4xl p-5 mb-15 mt-15">
           <h3 className="mb-5 font-semibold text-xl">Nyckelfärdiga Hus</h3>
@@ -92,7 +95,10 @@ function Services() {
           </h4>
         </div>
         <div className="sm:max-w-[75%]">
-          <Gallery rounded={false} images={[renhus3, hus1, renhus1, renhus2]} />
+          <Gallery
+            rounded={false}
+            images={[renhus3, hus6, hus1, renhus1, renhus2]}
+          />
         </div>
         <div className="max-w-[70%]">
           <h1 className=" text-2xl mt-15 mb-10 font-semibold">

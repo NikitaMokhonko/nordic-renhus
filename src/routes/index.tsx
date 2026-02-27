@@ -1,10 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Gallery } from "../components/Gallery";
-import p1 from "../../public/Bygg-1.jpeg";
-import p2 from "../../public/Bygg-2.jpeg";
-import p3 from "../../public/Bygg-3.jpeg";
-import p4 from "../../public/Bygg-4.jpeg";
-import p5 from "../../public/Bygg-5.jpeg";
+import p1 from "../../public/renhus3.jpg";
+import p2 from "../../public/hus2.jpg";
+import p3 from "../../public/Bygg-1.jpeg";
+import p4 from "../../public/hus4.jpg";
 import { Welcome } from "@/components/Welcome";
 import { useNavigate } from "@tanstack/react-router";
 
@@ -30,7 +29,7 @@ function Home() {
         </h2>
       </div>
       <div className="max-w-full lg:max-w-[80%] mx-auto bg-black">
-        <Gallery rounded={false} images={[p1, p2, p3, p4, p5]} />
+        <Gallery rounded={false} images={[p1, p2, p4, p3]} />
       </div>
       <p className="text-white text-xl text-center mt-15">
         Kolla igenom alla våra tjänster{" "}
