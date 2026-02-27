@@ -16,6 +16,7 @@ import renhus2 from "../../public/renhus2.jpg";
 import bygg10 from "../../public/Bygg-10.jpeg";
 import renhus3 from "../../public/renhus3.jpg";
 import kok1 from "../../public/kok1.jpg";
+import tvatt1 from "../../public/tvatt1.jpg";
 import { useNavigate } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/services")({
@@ -84,7 +85,7 @@ function Services() {
           </h4>
         </div>
         <div className="sm:max-w-[75%]">
-          <Gallery rounded={false} images={[hus2, hus3, hus4, kok1]} />
+          <Gallery rounded={false} images={[hus2, hus3, hus4, kok1, tvatt1]} />
         </div>
         <div className="w-[80%] lg:w-[50%] lg:border-x border-[#e21c1f] rounded-4xl p-5 mb-15 mt-15">
           <h3 className="mb-5 font-semibold text-xl">Nyckelfärdiga Hus</h3>
