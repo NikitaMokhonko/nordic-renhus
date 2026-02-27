@@ -24,7 +24,7 @@ export function Header() {
       type="button"
     >
       <span className="text-lg font-semibold">{link.label}</span>
-      <span className="block h-px bg-white w-full transform mt-0.5 scale-x-0 origin-left transition-transform duration-400 ease-out group-hover:scale-x-100" />
+      <span className="block h-px bg-[#e21c1f] w-full transform mt-0.5 scale-x-0 origin-left transition-transform duration-400 ease-out group-hover:scale-x-100" />
     </button>
   ));
 
