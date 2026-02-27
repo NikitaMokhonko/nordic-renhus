@@ -5,6 +5,10 @@ import p2 from "../../public/Bygg-2.jpeg";
 import p3 from "../../public/Bygg-3.jpeg";
 import p4 from "../../public/Bygg-4.jpeg";
 import p5 from "../../public/Bygg-5.jpeg";
+import hus1 from "../../public/hus1.jpg";
+import hus2 from "../../public/hus2.jpg";
+import hus3 from "../../public/hus3.jpg";
+import hus4 from "../../public/hus4.jpg";
 import { useNavigate } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/services")({
@@ -15,46 +19,54 @@ function Services() {
   const navigate = useNavigate();
   return (
     <>
-      <div className="flex flex-col min-h-screen items-center mt-10 text-center sm:max-w-[70%] mx-auto">
-        <h1 className="text-xl font-bold mb-10">Våra tjänster</h1>
-        <div className="max-w-[70%]">
-          <h3 className="mb-5 font-semibold">Rivning & demontering</h3>
-          <h4 className="mb-10">
+      <div className="flex flex-col min-h-screen items-center pt-15 lg:pt-20 text-white bg-black text-center mx-auto">
+        <h1 className="text-4xl font-bold mb-15 lg:mb-20">Våra tjänster</h1>
+        <div className="w-[80%] lg:w-[50%] lg:border-x border-[#e21c1f] rounded-4xl p-5 mb-15 bg-linear-to-t from-black to-transparent">
+          <h3 className="mb-5 font-semibold text-xl">Rivning & demontering</h3>
+          <h4 className="">
             Vi erbjuder professionella rivnings- och demonteringstjänster alla
             typer av objekt. <br />
             Vårt team är utrustat för att hantera allt från mindre
             inomhusprojekt till större strukturella rivningar.
           </h4>
         </div>
-        <Gallery images={[p1, p2, p3, p4, p5]} />
-        <div className="max-w-[70%]">
-          <h3 className="mb-5 font-semibold">Markarbeten</h3>
-          <h4 className="mb-10">
+        <div className="sm:max-w-[75%]">
+          <Gallery rounded={false} images={[p1, p2, p3, p4, p5]} />
+        </div>
+        <div className="w-[80%] lg:w-[50%] lg:border-x border-[#e21c1f] rounded-4xl p-5 mb-15 mt-15">
+          <h3 className="mb-5 font-semibold text-xl">Markarbeten</h3>
+          <h4 className="">
             Våra markarbetstjänster omfattar allt från grundläggning och
             dränering till landskapsformning och vägkonstruktion.
           </h4>
         </div>
-        <Gallery images={[p1, p2, p3, p4, p5]} />
-        <div className="max-w-[70%]">
-          <h3 className="mb-5 font-semibold">Nyckelfärdiga Hus</h3>
-          <h4 className="mb-10">
-            Vi bygger ditt drömhem från grunden till inflyttningsklart skick.
-            Vårt erfarna team hanterar alla aspekter av byggprocessen, inklusive
-            design, materialval och konstruktion.
-          </h4>
+        <div className="sm:max-w-[75%]">
+          <Gallery rounded={false} images={[p1, p2, p3, p4, p5]} />
         </div>
-        <Gallery images={[p1, p2, p3, p4, p5]} />
-        <div className="max-w-[70%]">
-          <h3 className="mb-5 font-semibold">Isolering</h3>
-          <h4 className="mb-10">
+        <div className="w-[80%] lg:w-[50%] lg:border-x border-[#e21c1f] rounded-4xl p-5 mb-15 mt-15">
+          <h3 className="mb-5 font-semibold text-xl">Isolering</h3>
+          <h4 className="">
             Vi erbjuder högkvalitativa isoleringstjänster för att förbättra
             energieffektiviteten i ditt hem eller kommersiella byggnad. Våra
             lösningar inkluderar både termisk och akustisk isolering.
           </h4>
         </div>
-        <Gallery images={[p1, p2, p3, p4, p5]} />
+        <div className="sm:max-w-[75%]">
+          <Gallery rounded={false} images={[p1, p2, p3, p4, p5]} />
+        </div>
+        <div className="w-[80%] lg:w-[50%] lg:border-x border-[#e21c1f] rounded-4xl p-5 mb-15 mt-15">
+          <h3 className="mb-5 font-semibold text-xl">Nyckelfärdiga Hus</h3>
+          <h4 className="">
+            Vi bygger ditt drömhem från grunden till inflyttningsklart skick.
+            Vårt erfarna team hanterar alla aspekter av byggprocessen, inklusive
+            design, materialval och konstruktion.
+          </h4>
+        </div>
+        <div className="sm:max-w-[75%]">
+          <Gallery rounded={false} images={[hus1, hus2, hus3, hus4]} />
+        </div>
         <div className="max-w-[70%]">
-          <h1 className=" text-2xl mt-5 mb-10 font-semibold">
+          <h1 className=" text-2xl mt-15 mb-10 font-semibold">
             Hittar du inte det du söker?{" "}
             <span
               className="underline cursor-pointer"

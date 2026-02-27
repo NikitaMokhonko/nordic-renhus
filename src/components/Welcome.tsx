@@ -2,20 +2,20 @@ import RotatingText from "./RotatingText";
 
 export function Welcome() {
   return (
-    <div className="w-full pb-10">
+    <div className="w-full">
       <img
         className="w-full h-screen object-cover"
         src="black-house.jpeg"
         alt="Black House"
       />
-      <div className="z-10 p-5 backdrop-blur-lg bg-black/60 rounded-sm font-semibold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
+      <div className="z-10 p-5 backdrop-blur-lg bg-black/75 rounded-lg font-semibold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
         <h1 className="text-white text-4xl sm:text-6xl px-4 py-2">
           Nordic Renhus AB
         </h1>
         <p className="text-white text-center text-lg sm:text-4xl mt-4 px-4 py-2">
           Din byggfirma för <br />
           <RotatingText
-            texts={["Byggnation", "Demontering", "Markarbete", "Renovering", "Isolering"]}
+            texts={["Rivningar", "Markarbeten", "Isolering", "Byggnation"]}
             mainClassName="justify-center inline-block"
             staggerFrom={"last"}
             initial={{ y: "100%" }}

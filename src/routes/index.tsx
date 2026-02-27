@@ -6,17 +6,19 @@ import p3 from "../../public/Bygg-3.jpeg";
 import p4 from "../../public/Bygg-4.jpeg";
 import p5 from "../../public/Bygg-5.jpeg";
 import { Welcome } from "@/components/Welcome";
+import { useNavigate } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
   component: Home,
 });
 
 function Home() {
+  const navigate = useNavigate();
   return (
-    <>
+    <div className="bg-black pb-10">
       <Welcome />
-      <div className="pb-10 flex flex-col justify-center text-center max-w-[80%] mx-auto">
-        <h1 className="text-4xl font-semibold mb-4 sm:mb-10">
+      <div className="max-w-[80%] mx-auto pb-10 pt-10 flex flex-col justify-center text-center text-white bg-black">
+        <h1 className="text-4xl font-semibold mb-5 sm:mb-10">
           Vi hjälper dig med alla typer av byggprojekt, stora som små
         </h1>
         <h2>
@@ -27,7 +29,19 @@ function Home() {
           dig att skapa ditt drömhem.
         </h2>
       </div>
-      <Gallery images={[p1, p2, p3, p4, p5]} />
-    </>
+      <div className="max-w-full lg:max-w-[80%] mx-auto bg-black">
+        <Gallery rounded={false} images={[p1, p2, p3, p4, p5]} />
+      </div>
+      <p className="text-white text-xl text-center mt-15">
+        Kolla igenom alla våra tjänster{" "}
+        <a
+          onClick={() => navigate({ to: "/services" })}
+          className="underline  cursor-pointer"
+        >
+          här
+        </a>
+        !
+      </p>
+    </div>
   );
 }

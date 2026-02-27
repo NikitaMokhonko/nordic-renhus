@@ -2,9 +2,10 @@ import { useState } from "react";
 
 type GalleryProps = {
   images: string[];
+  rounded: boolean;
 };
 
-export function Gallery({ images }: GalleryProps) {
+export function Gallery({ images, rounded }: GalleryProps) {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(
     null
   );
@@ -22,15 +23,17 @@ export function Gallery({ images }: GalleryProps) {
   };
 
   return (
-    <div className="max-w-[99%] mx-auto pb-10">
-      <div className="flex gap-1 sm:gap-3 overflow-x-auto snap-x snap-mandatory h-100 sm:h-auto">
+    <div className="max-w-[99%] mx-auto">
+      <div
+        className={`flex gap-1 overflow-x-auto snap-x snap-mandatory h-100 sm:h-auto ${rounded ? "lg:rounded-4xl lg:rounded-b-none" : ""}`}
+      >
         {images.map((img, i) => (
           <img
             key={i}
             src={img}
             alt="Projekt"
             onClick={() => setSelectedImageIndex(i)}
-            className="snap-center shrink-0 w-[80%] h-full sm:h-170 sm:w-[23%] object-cover cursor-pointer"
+            className="snap-center shrink-0 w-[85%] h-full sm:h-160 sm:w-[48%] object-cover object-center cursor-pointer"
           />
         ))}
       </div>

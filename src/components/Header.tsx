@@ -8,7 +8,6 @@ export function Header() {
 
   const links = [
     { path: "/", label: "Hem" },
-    { path: "/about", label: "Om oss" },
     { path: "/services", label: "Tjänster" },
     { path: "/contact", label: "Kontakt" },
   ];
