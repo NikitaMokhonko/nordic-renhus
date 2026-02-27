@@ -13,7 +13,7 @@ import hus6 from "../../public/hus6.jpg";
 import hus7 from "../../public/hus7.jpg";
 import renhus1 from "../../public/renhus1.jpg";
 import renhus2 from "../../public/renhus2.jpg";
-import bygg10 from "../../public/bygg-10.jpeg";
+import bygg10 from "../../public/Bygg-10.jpeg";
 import renhus3 from "../../public/renhus3.jpg";
 import kok1 from "../../public/kok1.jpg";
 import { useNavigate } from "@tanstack/react-router";
